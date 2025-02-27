@@ -1,0 +1,36 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int nTestes = int.Parse(Console.ReadLine());
+        string entrada;
+        string [] divEntrada;
+        int []n1,n2,res;
+        n1 = new int[nTestes];
+        n2 = new int[nTestes];
+        res = new int[nTestes];
+        for(int i = 0; i<nTestes;i++){
+            entrada = Console.ReadLine();
+            divEntrada = entrada.Split(' ');
+            n1[i]=int.Parse(divEntrada[0]);
+            n2[i]=int.Parse(divEntrada[1]);
+            res[i] = MDC(n1[i],n2[i]);
+            Console.WriteLine(res[i]);
+        }
+        
+
+    }
+    static int MDC(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+
+}
