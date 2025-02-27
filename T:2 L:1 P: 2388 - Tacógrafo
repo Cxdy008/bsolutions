@@ -1,0 +1,28 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int N = int.Parse(Console.ReadLine()), somatorio=0;
+        string[] input = new string[N];
+        string[] divInput;
+        int [] valor1, valor2, mult;
+        valor1 = new int[N];
+        valor2 = new int[N];
+        mult = new int[N];
+        for(int i = 0; i<N;i++){
+            input[i] = Console.ReadLine();
+            divInput = input[i].Split(' ');
+            valor1[i] = int.Parse(divInput[0]);
+            valor2[i] = int.Parse(divInput[1]);
+            mult[i] = valor1[i] * valor2[i];
+            somatorio+=mult[i];
+        }
+        Console.WriteLine(somatorio);
+        
+        
+
+    }
+
+}
