@@ -1,0 +1,22 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+        string input;
+        string[] divInput;
+        int[] T = new int [4];
+        int somaT=0;
+        input = Console.ReadLine();
+        divInput = input.Split(' ');
+        for(int i = 0; i<T.Length;i++){
+            T[i]=int.Parse(divInput[i]);
+            somaT+=T[i];
+        }
+        Console.WriteLine(somaT-3);
+        
+        
+
+    }
+
+}
