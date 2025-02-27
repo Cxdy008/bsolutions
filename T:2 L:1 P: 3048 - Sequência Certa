@@ -1,0 +1,24 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int N = int.Parse(Console.ReadLine());
+        int []seq = new int [N];
+        int valorGuardado=0, resposta=0;
+        for(int i = 0; i<N; i++){
+            seq[i] = int.Parse(Console.ReadLine());
+        }
+        for(int i = 0; i<N; i++){
+            if(valorGuardado!=seq[i]){
+                valorGuardado = seq[i];
+                resposta++;
+            }
+                
+        }
+        Console.WriteLine(resposta);
+
+    }
+
+}
