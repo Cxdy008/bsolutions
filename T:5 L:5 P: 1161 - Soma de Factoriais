@@ -1,0 +1,27 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string input;
+
+        while((input=Console.ReadLine())!=null){
+            string [] breakInput = input.Split(' ');
+            long n1,n2,sum;
+            n1 = long.Parse(breakInput[0]);
+            n2 = long.Parse(breakInput[1]);
+            sum=Factorial(n1)+Factorial(n2);
+            Console.WriteLine(sum);
+        }
+
+    }
+    static long Factorial(long num){
+        long factorial = 1;
+        for(long i=num;i>0;i--){
+            factorial*=i;
+        }
+        return factorial;
+    }
+
+}
