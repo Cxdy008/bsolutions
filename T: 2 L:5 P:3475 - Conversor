@@ -1,0 +1,36 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string entrada = Console.ReadLine();
+        int numero;
+        int [] algarismos = new int[10];
+        string[] extenso = {"zero","um","dois","tres","quatro",
+            "cinco","seis","sete","oito","nove"};
+        string resposta = "";
+        for(int i = 0; i<extenso.Length;i++){
+            algarismos[i]=i;
+        }
+        try{
+            numero = int.Parse(entrada);
+            for(int i = 0; i<extenso.Length; i++){
+                if(numero == i){
+                    resposta = extenso[i];
+                }
+            }
+        }
+        catch{
+            for(int i = 0; i<extenso.Length; i++){
+                if(entrada == extenso[i]){
+                    resposta = algarismos[i].ToString();
+                }
+            }
+        }
+        Console.WriteLine(resposta);
+ 
+
+    }
+
+}
