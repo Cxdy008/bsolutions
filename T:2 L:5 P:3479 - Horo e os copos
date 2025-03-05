@@ -1,0 +1,114 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string entrada = Console.ReadLine(), resposta="";
+        string [] divEntrada = entrada.Split('/');
+        int dia, mes;
+        dia = int.Parse(divEntrada[0]);
+        mes = int.Parse(divEntrada[1]);
+        switch(mes){
+            case 1:
+                if(dia<=19){
+                    resposta = "capricornio";
+                }
+                else{
+                    resposta = "aquario";
+                }
+                break;
+            case 2:
+                if(dia<=18){
+                    resposta = "aquario";
+                }
+                else{
+                    resposta = "peixes";
+                }
+                break;
+            case 3:
+                if(dia<=20){
+                    resposta = "peixes";
+                }
+                else{
+                    resposta = "aries";
+                }
+                break;
+            case 4:
+                if(dia<=20){
+                    resposta = "aries";
+                }
+                else{
+                    resposta = "touro";
+                }
+                break;
+            case 5:
+                if(dia<=20){
+                    resposta = "touro";
+                }
+                else{
+                    resposta = "gemeos";
+                }
+                break;
+            case 6:
+                if(dia<=20){
+                    resposta = "gemeos";
+                }
+                else{
+                    resposta = "cancer";
+                }
+                break;
+            case 7:
+                if(dia<=22){
+                    resposta = "cancer";
+                }
+                else{
+                    resposta = "leao";
+                }
+                break;
+            case 8:
+                if(dia<=22){
+                    resposta = "leao";
+                }
+                else{
+                    resposta = "virgem";
+                }
+                break;
+            case 9:
+                if(dia<=22){
+                    resposta = "virgem";
+                }
+                else{
+                    resposta = "libra";
+                }
+                break;
+            case 10:
+                if(dia<=22){
+                    resposta = "libra";
+                }
+                else{
+                    resposta = "escorpiao";
+                }
+                break;
+            case 11:
+                if(dia<=18){
+                    resposta = "escorpiao";
+                }
+                else{
+                    resposta = "sagitario";
+                }
+                break;
+            case 12:
+                if(dia<=21){
+                    resposta = "sagitario";
+                }
+                else{
+                    resposta = "capricornio";
+                }
+                break;
+        }
+        Console.WriteLine(resposta);
+
+    }
+
+}
