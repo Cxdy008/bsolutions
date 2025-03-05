@@ -1,0 +1,28 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string entrada = Console.ReadLine();
+        string [] divEntrada = entrada.Split(' ');
+        int x,y,z;
+        bool ehTrianguloRectangulo;
+        x = int.Parse(divEntrada[0]);
+        y = int.Parse(divEntrada[1]);
+        z = int.Parse(divEntrada[2]);
+        ehTrianguloRectangulo = x*x == (y*y) + (z*z);
+        if(ehTrianguloRectangulo){
+            int areaTri,areaCir,areaTotal, Pi=3;
+            areaTri=(z*y)/2;
+            areaCir=(Pi*z*z)/8;
+            areaTotal = areaTri + areaCir;
+            Console.WriteLine("AREA = {0}",areaTotal);
+        }
+        else{
+            Console.WriteLine("Nao eh retangulo!");
+        }    
+
+    }
+
+}
