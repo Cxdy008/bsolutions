@@ -1,0 +1,22 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+        string entrada;
+        do{
+            entrada = Console.ReadLine();
+            if(entrada == null)
+                break;
+            if(entrada.EndsWith("L")){
+                Console.WriteLine("Esse eh o meu lugar");
+            }
+            else{
+                Console.WriteLine("Oi, Leonard");
+            }
+            
+        }while(true);
+
+    }
+
+}
