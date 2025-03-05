@@ -1,0 +1,22 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string entrada = Console.ReadLine();
+        int nDeBits=0;
+        for(int i = 0;i<entrada.Length;i++){
+            if(entrada[i]=='0' || entrada[i]=='1'){
+                nDeBits++;
+            }
+        }
+        if(nDeBits==8){
+            Console.WriteLine("S");
+        }else{
+            Console.WriteLine("F");
+        }
+
+    }
+
+}
