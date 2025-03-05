@@ -1,0 +1,21 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string entrada = Console.ReadLine();
+        string[] divEntrada = entrada.Split(' ');
+        int N;
+        double V, resposta;
+        V = double.Parse(divEntrada[0]);
+        N = int.Parse(divEntrada[1]);
+        if(N==0)
+            resposta = V;
+        else
+            resposta = V/N;
+        Console.WriteLine(resposta.ToString("F2"));   
+
+    }
+
+}
