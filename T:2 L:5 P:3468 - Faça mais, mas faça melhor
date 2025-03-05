@@ -1,0 +1,18 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string entrada = Console.ReadLine();
+        entrada = entrada.ToLower();
+        if(entrada == "oposicao" || entrada == "contrariedade"){
+            Console.WriteLine("mas");
+        }
+        else{
+            Console.WriteLine("mais");
+        }
+
+    }
+
+}
