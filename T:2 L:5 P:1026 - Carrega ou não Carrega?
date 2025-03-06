@@ -1,0 +1,33 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+        string entrada;
+        string []divEntrada;
+        while(true){
+            string resposta="";
+            uint n1,n2;
+            entrada = Console.ReadLine();
+            if(entrada == null)
+                break;
+            divEntrada = entrada.Split(' ');
+            n1 = uint.Parse(divEntrada[0]);
+            n2 = uint.Parse(divEntrada[1]);
+            
+            string N1 = Convert.ToString(n1, 2).PadLeft(32, '0');
+            string N2 = Convert.ToString(n2, 2).PadLeft(32, '0');
+            for(int i = 0; i<N1.Length; i++){
+                
+                if(N1[i]==N2[i]){
+                    resposta+="0";
+                }else{
+                    resposta+="1";
+                }
+            }
+            Console.WriteLine(Convert.ToUInt32(resposta,2));
+        }
+
+    }
+
+}
