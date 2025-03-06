@@ -1,0 +1,72 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+            
+        string entrada, fim = "0 0 0 0";
+        string[] divEntrada;
+        while(true){
+            int h1,m1,h2,m2;
+            int difHora, difMinutos, minutos;
+            difHora = difMinutos = minutos =0;
+            entrada = Console.ReadLine();
+            if(string.Equals(entrada,fim))
+                break;
+            divEntrada = entrada.Split(' ');
+            h1 = int.Parse(divEntrada[0]);  
+            if(h1==0)
+                h1=24;         
+            m1 = int.Parse(divEntrada[1]);
+            h2 = int.Parse(divEntrada[2]);
+            if(h2==0)
+                h2=24;
+            m2 = int.Parse(divEntrada[3]);
+            if(h1>h2){
+                difHora = 24 - (h1-h2);
+                if(m1>m2){
+                    difMinutos = m2-m1;
+                }
+                else if(m1<m2){
+                    difMinutos = m2-m1;
+                }
+                else{
+                    difMinutos = 0;
+                }
+                minutos = (difHora *60)+ difMinutos;
+            }
+            else if(h1<h2){
+                difHora = h2 - h1;
+                if(m1>m2){
+                    difMinutos = m2-m1;
+                }
+                else if(m1<m2){
+                    difMinutos = m2-m1;
+                }
+                else{
+                    difMinutos = 0;
+                }
+                minutos = (difHora *60) + difMinutos;
+            }
+            else{
+                difHora=24;
+               if(m1>m2){
+                    difMinutos = m2-m1;
+                }
+                else if(m1<m2){
+                    difMinutos = m2-m1;
+                }
+                else{
+                    difMinutos = 0;
+                }
+                minutos = (difHora*60)+difMinutos;
+                if(minutos>difHora*60){
+                    minutos-=difHora*60;
+                }
+            }
+            Console.WriteLine(minutos);
+        }
+
+    }
+
+}
