@@ -1,0 +1,44 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+       int N = int.Parse(Console.ReadLine());
+        char[] alfabeto = new char[26];
+        for(int i = 65, j=0; i<alfabeto.Length+65;i++,j++){
+            alfabeto[j]=(char)i;
+        }
+        for(int i = 0;i<N;i++){
+            string entrada = Console.ReadLine(),saida="";
+
+            int salto = int.Parse(Console.ReadLine());            
+            for(int j=0;j<entrada.Length;j++){
+                
+                for(int k = 0; k<alfabeto.Length;k++){
+                    if(entrada[j]==alfabeto[k]){
+                        if(k-salto<0){
+                            int indice = (k-salto)*-1;
+                            indice = alfabeto.Length - indice;
+                            saida+=alfabeto[indice];
+                            
+                        }
+                        else{
+                            saida+=alfabeto[k-salto];
+                            
+                        }
+                        
+                        break;
+                    }
+                    
+                    
+                }
+                
+            }
+            Console.WriteLine(saida);
+            
+        }
+
+    }
+
+}
