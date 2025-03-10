@@ -1,0 +1,29 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        char[] vogais = {'a','e','i','o','u'};
+        char[] vogaisCriptografadas = {'@','&','!','*','#'};
+        while(true){
+            string carta = Console.ReadLine();
+            if(carta == null){
+                break;
+            }
+            for(int i = 0;i<carta.Length;i++){
+                for(int j=0;j<vogais.Length;j++){
+                    if(carta[i]==vogaisCriptografadas[j]){
+                        carta=carta.Replace(carta[i],vogais[j]);
+                       
+                    }
+                }
+            }
+            Console.WriteLine(carta);
+            
+        }
+            
+
+    }
+
+}
