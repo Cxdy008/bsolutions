@@ -1,0 +1,40 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int N = int.Parse(Console.ReadLine());
+        bool primeiroCaso =true;
+        string [] entradas;
+        while(true){
+            if(N==0){
+                break;
+            }
+            entradas = new string[N];
+            int maiorLength=0;
+            for(int i = 0; i<N;i++){
+                entradas[i]=Console.ReadLine();
+                if(entradas[i].Length>maiorLength){
+                    maiorLength=entradas[i].Length;
+                }
+            }
+            if (!primeiroCaso) 
+            {
+                Console.WriteLine();
+            }
+            primeiroCaso = false;
+            for(int i = 0; i<N;i++){
+                
+                    entradas[i] = entradas[i].PadLeft(maiorLength,' ');
+                
+            }
+            foreach(string n in entradas){
+                Console.WriteLine(n);
+            }
+            N = int.Parse(Console.ReadLine());
+        }
+
+    }
+
+}
