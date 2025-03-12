@@ -1,0 +1,35 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+        char [] alfabeto = new char[26];
+        for(int i = 97, j=0;j<alfabeto.Length;j++,i++){
+            alfabeto[j]=(char)i;
+        }
+        int N = int.Parse(Console.ReadLine());
+        for(int i = 0;i<N;i++){
+            int letras=0;
+            string entrada = Console.ReadLine();
+            for(int j = 0; j< entrada.Length; j++){
+                for(int r = 0; r<alfabeto.Length;r++){
+                    if(entrada[j]==alfabeto[r]){
+                        letras++;
+                        entrada = entrada.Replace(entrada[j],'-');
+                    }
+                }
+            }
+            if(letras==alfabeto.Length){
+                Console.WriteLine("frase completa");
+            }
+            else if(letras>=alfabeto.Length/2 && letras<alfabeto.Length){
+                Console.WriteLine("frase quase completa");
+            }
+            else{
+                Console.WriteLine("frase mal elaborada");
+            }
+        }
+
+    }
+
+}
