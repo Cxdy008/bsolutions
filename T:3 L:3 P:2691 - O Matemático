@@ -1,0 +1,57 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int N = int.Parse(Console.ReadLine());
+        for(int i =0;i<N;i++){
+            int maior = 5;
+            string entrada = Console.ReadLine();
+            string [] divEntrada = entrada.Split('x');
+            string [] saida;
+            int n1, n2;
+            n1=int.Parse(divEntrada[0]);
+            n2=int.Parse(divEntrada[1]);
+            
+            if(n1<n2){
+                saida = new string[6];
+                for(int j=0;j<=5;j++){
+                    
+                    saida[j] = string.Format("{0} x {1} = {2} && {3} x {4} = {5}",
+                    n1,maior,n1*maior,n2,maior,n2*maior);
+                    maior++;
+                }
+            }
+            else if(n1>n2){
+                saida = new string[6];
+                for(int j=0;j<=5;j++){
+                    saida[j] = string.Format("{0} x {1} = {2} && {3} x {4} = {5}",
+                    n1,maior,n1*maior,n2,maior,n2*maior);
+                    maior++;
+                }
+            }
+            else{
+                saida = new string[6];
+                for(int j=0;j<=5;j++){
+                    if(n1==n2){
+                        saida[j] = string.Format("{0} x {1} = {2}",
+                        n1,maior,n1*maior);
+                    }
+                    else{
+                        saida[j] = string.Format("{0} x {1} = {2} && {3} x {4} = {5}",
+                    n1,maior,n1*maior,n2,maior,n2*maior);
+                    }
+                    
+                    maior++;
+                }
+            }
+            foreach(string o in saida){
+                Console.WriteLine(o);
+            }
+            
+        }
+
+    }
+
+}
