@@ -1,0 +1,36 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        string entrada;
+        string [] divEntrada1, divEntrada2;
+        int n1,n2;
+        while(true){
+            entrada = Console.ReadLine();
+            if(entrada==null){
+                break;
+            }
+            divEntrada1 = entrada.Split('+');
+            divEntrada2 = divEntrada1[1].Split('=');
+            if(entrada.Contains("J")){
+                n1 = int.Parse(divEntrada1[0]);
+                n2 = int.Parse(divEntrada2[0]);
+                Console.WriteLine(n1+n2);
+            }
+            else if(entrada.Contains("L")){
+                n1 = int.Parse(divEntrada1[0]);
+                n2 = int.Parse(divEntrada2[1]);
+                Console.WriteLine(n2-n1); 
+            }
+            else if(entrada.Contains("R")){
+                n1 = int.Parse(divEntrada2[0]);
+                n2 = int.Parse(divEntrada2[1]);
+                Console.WriteLine(n2-n1); 
+            }
+        }
+
+    }
+
+}
