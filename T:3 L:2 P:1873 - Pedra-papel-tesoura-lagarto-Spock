@@ -1,0 +1,62 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int N = int.Parse(Console.ReadLine());
+        string entradas, saida="";
+        string []divEntradas;
+        for(int i = 0;i<N;i++){
+            entradas = Console.ReadLine();
+            divEntradas = entradas.Split(' ');
+            switch(divEntradas[0]){
+                case "tesoura":
+                    if(divEntradas[1]==divEntradas[0])
+                        saida="empate";
+                    else if(divEntradas[1]=="papel" || divEntradas[1]=="lagarto")
+                        saida="rajesh";
+                    else
+                        saida="sheldon";
+                    break;  
+                case "papel":
+                    if(divEntradas[1]==divEntradas[0])
+                        saida="empate";
+                    else if(divEntradas[1]=="pedra" || divEntradas[1]=="spock")
+                        saida="rajesh";
+                    else
+                        saida="sheldon";
+                    break;  
+                case "pedra":
+                    if(divEntradas[1]==divEntradas[0])
+                        saida="empate";
+                    else if(divEntradas[1]=="lagarto" || divEntradas[1]=="tesoura")
+                        saida="rajesh";
+                    else
+                        saida="sheldon";
+                    break;  
+                case "lagarto":
+                    if(divEntradas[1]==divEntradas[0])
+                        saida="empate";
+                    else if(divEntradas[1]=="spock" || divEntradas[1]=="papel")
+                        saida="rajesh";
+                    else
+                        saida="sheldon";
+                    break;  
+                case "spock":
+                    if(divEntradas[1]==divEntradas[0])
+                        saida="empate";
+                    else if(divEntradas[1]=="tesoura" || divEntradas[1]=="pedra")
+                        saida="rajesh";
+                    else
+                        saida="sheldon";
+                    break;  
+                    
+            }
+            Console.WriteLine(saida);
+            
+        }
+
+    }
+
+}
