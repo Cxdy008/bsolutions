@@ -1,0 +1,45 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int N = int.Parse(Console.ReadLine());
+        char [] alfabeto = new char[26];
+        for(int i = 0,j=65;i<alfabeto.Length;i++,j++){
+            alfabeto[i]=(char)j;
+        }
+        for(int i = 0;i<N;i++){
+            int numDeLinhas = int.Parse(Console.ReadLine());
+            string [] entradas = new string[numDeLinhas];
+            int somaHash =0;
+            int []somaParcialHash = new int[numDeLinhas];
+            
+            for(int j=0;j<numDeLinhas;j++){
+                somaParcialHash[j]=0;
+                entradas[j]=Console.ReadLine();
+                int[] valorHash = new int[entradas[j].Length];                
+                for(int a=0;a<entradas[j].Length;a++){
+                    valorHash[a]=0;                 
+                    for(int b=0;b<alfabeto.Length;b++){                    
+                        if(entradas[j][a]==alfabeto[b]){
+                            valorHash[a]+=b+j+a;
+                            somaParcialHash[j]+=valorHash[a];
+                            break;
+                        }
+                        else{
+                            continue;
+                        }
+                    }
+                    
+                }
+            }
+
+            for(int j = 0;j<numDeLinhas;j++){
+                somaHash+=somaParcialHash[j];
+            }
+            Console.WriteLine(somaHash);
+        }
+    }
+
+}
