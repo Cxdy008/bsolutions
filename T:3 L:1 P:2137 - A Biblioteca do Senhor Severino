@@ -1,0 +1,25 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        
+        while(true){
+            string N=Console.ReadLine();
+            
+            if(N==null)
+                break;
+            string [] entradas = new string[Convert.ToInt32(N)];
+            for(int i = 0; i<Convert.ToInt32(N);i++){
+                entradas[i] = Console.ReadLine();
+            }
+            Array.Sort(entradas);
+            foreach(string str in entradas){
+                Console.WriteLine(str);
+            }
+        }
+
+    }
+
+}
