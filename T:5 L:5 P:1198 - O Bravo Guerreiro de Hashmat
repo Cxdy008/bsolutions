@@ -1,0 +1,24 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        while(true){
+            string entrada = Console.ReadLine();
+            if(entrada==null)
+                break;
+            string [] divEntrada = entrada.Split(' ');
+            long n1, n2;
+            n1 = long.Parse(divEntrada[0]);
+            n2 = long.Parse(divEntrada[1]);
+            if(n2>n1)
+                Console.WriteLine(n2-n1);
+            else
+                Console.WriteLine((n2-n1)*-1);
+        
+        }
+
+    }
+
+}
