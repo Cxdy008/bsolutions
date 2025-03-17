@@ -1,0 +1,32 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        int N = int.Parse(Console.ReadLine());
+        for(int i=0;i<N;i++){
+            long num = long.Parse(Console.ReadLine());
+            if(IsPrime(num)){
+                Console.WriteLine("Prime");
+            }
+            else{
+                Console.WriteLine("Not Prime");
+            }
+        }
+
+    }
+    static bool IsPrime(long n) {
+        if (n < 2) return false;
+        if (n == 2 || n == 3 || n == 5 || n == 7) return true;
+        if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0 || n % 7 == 0) return false;
+
+        for (long i = 11; i * i <= n; i += 2) { 
+            if (n % i == 0)
+                return false;
+        }
+
+        return true;
+    }
+
+}
