@@ -1,0 +1,20 @@
+using System; 
+
+class URI {
+
+    static void Main(string[] args) { 
+        string entrada;
+        while(true){
+            entrada = Console.ReadLine();
+            if(entrada == null)
+                break;
+            string [] divEntrada = entrada.Split(' ');
+            int v,t;
+            v = int.Parse(divEntrada[0]);
+            t = int.Parse(divEntrada[1])*2;
+            Console.WriteLine(v*t);
+        }
+
+    }
+
+}
